@@ -1,13 +1,5 @@
 import re
 
-def number_is_valid(number):
-    """
-    Receive a number and check if he format is valid
-    
-    format should be an integer in the range from "-99999" to "99999"
-    """
-    return bool(re.match('^(-?\d{1,5})$', number))
-
 def number_to_text_format(number):
     """
     Receive a string containing a number and return a string with the same number in his text format.
@@ -88,4 +80,23 @@ def number_to_text_format(number):
     return text_format
 
 def group_number_in_three(number):
+    """
+    Receive a string and return a list with the same string destructured in groups of 3 characters
+
+    :param number: A string with len x
+
+    Example:
+        1548 => ['1', '548']
+        148 => ['148']
+        875148 => ['875' ,'148']
+        74675897 => ['74', '675' ,'897']
+    """
     return [number[::-1][i:i+3:][::-1] for i in range(0, len(number), 3)][::-1]
+
+def number_is_valid(number):
+    """
+    Receive a number and check if he format is valid
+    
+    format should be an integer in the range from "-99999" to "99999"
+    """
+    return bool(re.match('^(-?\d{1,5})$', number))

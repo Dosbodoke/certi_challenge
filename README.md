@@ -23,6 +23,16 @@ docker run -d -p 5000:5000 juan_certi
 ```
 
 ## Usage
+The application can be used with a custom input via HTTP request, where the endpoin is the number that you want to translate.
+
 ```bash
-curl http://127.0.0.1:5000/
+curl http://127.0.0.1:5000/<number>
+```
+
+## Test
+To run unittest you should start the container and run the following command.
+
+```bash
+docker exec -it <container_id> /bin/bash
+python3 src/test.py
 ```
