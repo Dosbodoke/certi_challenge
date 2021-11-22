@@ -2,7 +2,13 @@
 
 This application is made for the challenge made by certi on the technical interview.
 
+First I want to thank you for the opportunity and I hope you like what you will see
+
 **candidate =>** Juan Gabriel Sousa Andrade
+
+**email =>** juangabriel4699@gmail.com
+
+**linkedin =>** [https://www.linkedin.com/in/juan-andrade-888200212/]()
 
 ## Installation
 
