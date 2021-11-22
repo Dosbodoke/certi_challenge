@@ -72,15 +72,14 @@ def number_to_text_format(number):
                 text_list.append(TRANSLATION[dezena][1])
 
         if int(unidade) and dezena != '1':
-            if unidade == '1' and is_first_group:
+            if unidade == '1' and is_first_group and int(dezena) == 0:
                 pass
             else:
                 text_list.append(TRANSLATION[unidade][0])
 
         text_format += ' e '.join(filter(None, text_list))
-
         if is_first_group:
-            if len(text_list) == 1:
+            if len(text_list) == 1 or (int(unidade) >= 1 and int(dezena)):
                 text_format += ' '
             text_format += 'mil'
             if int(number_grouped[1]):
