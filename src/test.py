@@ -14,5 +14,5 @@ class TestNumberConversion(unittest.TestCase):
         self.assertEqual(number_to_text_format('-108'), 'menos cento e oito')
         self.assertEqual(number_to_text_format('-100'), 'menos cem')
 
-if __name__=="__main__":
+if __name__ == "__main__":
     unittest.main()

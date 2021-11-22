@@ -15,7 +15,7 @@ def number_to_text_format(number):
     TRANSLATION = {
         '-': 'menos',
         '0': '',
-        '1': ['um', 'dez', 'cem'],
+        '1': ['um', 'dez', 'cem', 'cento'],
         '2': ['dois', 'vinte', 'duzentos'],
         '3': ['três', 'trinta', 'trezentos'],
         '4': ['quatro', 'quarenta', 'quatrocentos'],
@@ -46,6 +46,7 @@ def number_to_text_format(number):
         text_format += f"{TRANSLATION['-']} "
 
     number_grouped = group_number_in_three(absolute_number)
+
     for index, group in enumerate(number_grouped):
         is_first_group = (index == 0 and len(number_grouped) > 1)
         centena, dezena, unidade = group.zfill(3)
@@ -53,7 +54,7 @@ def number_to_text_format(number):
 
         if int(centena):
             if centena == '1' and (int(dezena) or int(unidade)):
-                text_list.append('cento')
+                text_list.append(TRANSLATION[centena][3])
             else:
                 text_list.append(TRANSLATION[centena][2])
 

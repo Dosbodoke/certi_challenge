@@ -15,4 +15,4 @@ def translate(number):
     return {"error": "Incorrect input format, input should be a number and be in the range from -99999 to 99999"}, 400
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
