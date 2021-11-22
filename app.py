@@ -12,7 +12,7 @@ def translate(number):
     if number_is_valid(number):
         return {"extenso": number_to_text_format(number)}
 
-    return {"error": "Incorrect input format, input should be a number and be in the range from -99999 to 99999"}
+    return {"error": "Incorrect input format, input should be a number and be in the range from -99999 to 99999"}, 400
 
 if __name__ == "__main__":
     app.run(debug=True)
